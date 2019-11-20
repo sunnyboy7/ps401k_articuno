@@ -1,0 +1,12 @@
+@import './colors.scss';
+@import './style.scss';
+
+body {
+  -webkit-font-smoothing: antialiased;
+  display: table;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  margin: 0;
+  width: 100%;
+}
