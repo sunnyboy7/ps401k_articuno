@@ -1,23 +1,16 @@
 import React from 'react';
-import Header from '../../components/Header';
-import Home from '../../components/Home';
 import style from './style.scss';
+// import EmployeeMaintenance from '../../components/Employees/EmployeeMaintenance';
+// import ValuationMaintenance from '../../components/Valuation/ValuationMaintenance';
+import WithdrawalsHistory from '../../components/Withdrawals/WithdrawalsHistory';
 
 class App extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      bodyText: 'Welcome to PS401K',
-      headerText: 'PS401k',
-    };
-  }
-
   render() {
-    const { bodyText, headerText } = this.state;
     return (
       <div className={style.mainBody}>
-        <Header text={headerText} />
-        <Home text={bodyText} />
+        {/* <EmployeeMaintenance />
+        <ValuationMaintenance /> */}
+        <WithdrawalsHistory />
       </div>
     );
   }

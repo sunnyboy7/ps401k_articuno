@@ -10,3 +10,69 @@
   text-align: center;
   font-weight: 600;
 }
+
+.searchBar {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  float: right;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.mainBody {
+  margin-left: 5%;
+  padding-top: 2%;
+  margin-right: 5%;
+}
+
+.divTitle {
+  margin-bottom: 16px;
+  margin-top: 16px;
+  margin-left: 15px;
+}
+
+.subtitle1 {
+  color: #cd4b4b;
+  font-size: 19px;
+}
+
+.subtitle2 {
+  color: rgb(49, 154, 97);
+  font-size: 19px;
+}
+
+.ExcelIcon {
+  float: right;
+  padding-right: 35px;
+}
+
+.WH_border {
+  border: 1px solid #ececec;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+
+.WH_innerDiv {
+  margin-bottom: 12px;
+}
+
+.WH_searchBtn {
+  margin-top: 58px;
+}
+
+.WH_Tabs {
+  margin-top: 35px;
+}
+
+#uncontrolled-tab-example-tab-completed {
+  color: white !important;
+  background-color: #8e4fc4 !important;
+}
+
+#uncontrolled-tab-example-tab-pendings {
+  background-color: #979797;
+  color: white;
+}

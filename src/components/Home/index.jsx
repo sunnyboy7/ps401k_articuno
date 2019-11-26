@@ -7,17 +7,17 @@ class Home extends React.PureComponent {
     const { text } = this.props;
     return (
       <div className={style.bodyContent}>
-        <p>{ text }</p>
+        <p>{text}</p>
       </div>
     );
   }
 }
 
 Home.propTypes = {
-  text: PropTypes.string,
+  text: PropTypes.string
 };
 Home.defaultProps = {
-  text: '',
+  text: ''
 };
 
 export default Home;

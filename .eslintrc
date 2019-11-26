@@ -6,13 +6,19 @@
     "jest": true
   },
   "rules": {
-    "camelcase": ["error", {"properties": "always"}],
-    "import/extensions": [{"sass": "never"}],
-    "jsx-a11y/anchor-is-valid": [ "error", { "components": [ "Link" ], "specialLink": [ "to" ] } ],
+    "camelcase": ["error", { "properties": "always" }],
+    "import/extensions": [{ "sass": "never" }],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      { "components": ["Link"], "specialLink": ["to"] }
+    ],
     "react/forbid-prop-types": 0,
-    "no-undef":0,
-    "no-multiple-empty-lines": [2, {"max": 2, "maxBOF": 0, "maxEOF": 0}],
-    "max-lines": ["error", 150],
-    "max-statements-per-line": ["error", {"max": 1}]
+    "no-undef": 0,
+    "no-multiple-empty-lines": [2, { "max": 2, "maxBOF": 0, "maxEOF": 0 }],
+    "max-lines": ["error", 5000],
+    "max-statements-per-line": ["error", { "max": 1 }],
+    "comma-dangle": ["error", "never"],
+    "linebreak-style": 0,
+    "global-require": 0
   }
 }
