@@ -1,7 +1,12 @@
-@import '../../assets/styles/colors';
+@import "../../assets/styles/colors";
 
 .headerContainer {
   text-align: left;
+}
+.header-tilte {
+  margin: 20px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .bodyContainer {
@@ -10,3 +15,293 @@
   text-align: center;
   font-weight: 600;
 }
+
+.navbar {
+  background-color: #5cc88a !important;
+}
+
+.navbar-collapse {
+  padding-left: 165px;
+}
+.navbar-brand {
+  top: -6px;
+  position: absolute;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  padding: 20px;
+}
+.cards {
+  display: table;
+  float: left;
+  padding-right: 15px;
+}
+
+.companyLogo {
+  max-width: 100%;
+}
+
+.card-tab {
+  border: 1px solid #bdb3b3;
+  height: 190px;
+}
+
+.card-tab-tiny {
+  width: 180px;
+}
+
+.card-img-top {
+  width: 60px;
+  height: 60px;
+}
+
+.card {
+  width: 150px;
+  float: left;
+  display: table;
+  cursor: pointer;
+  margin: 10px;
+  height: 160px;
+}
+
+.card:hover {
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+}
+
+.card-header-title {
+  font-weight: 500;
+}
+.card-body {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.employees-list {
+  color: #1e8bc3;
+}
+
+.balances-edit {
+  color: #f86924;
+}
+
+.float-none {
+  float: none;
+}
+
+.profitSharing,
+.retirementPlan {
+  width: 100%;
+  padding: 10px;
+  background-color: #ebeff2;
+  display: table;
+}
+.card-text {
+  font-weight: 500;
+  font-size: 13px;
+}
+.ProfitSharingDiv {
+  width: 96%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding-top: 45px;
+}
+
+.RetirementPlanDiv {
+  width: 96%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.ValuationsEdit {
+  padding-top: 30px;
+}
+
+.title {
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.greyColor {
+  background-color: #fff !important;
+}
+
+.beginningBal {
+  background-color: #afffff !important;
+}
+
+.empContrib {
+  background-color: #b9f89d !important;
+}
+
+.withdrawls {
+  background-color: #f2c9f2 !important;
+}
+
+.allocations {
+  background-color: #ffc973 !important;
+}
+
+.endingBal {
+  background-color: #b7eaff !important;
+}
+
+.MuiTableCell-stickyHeader {
+  font-weight: bold !important;
+  font-size: 13px !important;
+}
+
+.MuiTableCell-body {
+  border: 1px solid #ededed;
+}
+
+.pad-left-10 {
+  padding-left: 10px;
+}
+
+.required {
+  color: red;
+  padding-left: 5px;
+}
+
+.subHeader {
+  font-size: 18px;
+}
+
+.contribution {
+  float: right;
+}
+
+/* Imran  Changes*/
+.searchBar {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  float: right;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.EmpMainDiv {
+  margin-left: 5%;
+  padding-top: 2%;
+  margin-right: 5%;
+}
+
+.divTitle {
+  margin-bottom: 16px;
+  margin-top: 16px;
+  margin-left: 15px;
+}
+
+.subtitle1 {
+  color: #cd4b4b;
+  font-size: 19px;
+}
+
+.subtitle2 {
+  color: rgb(49, 154, 97);
+  font-size: 19px;
+}
+
+.ExcelIcon {
+  float: right;
+  padding-right: 35px;
+}
+
+.WH_border {
+  border: 1px solid #ececec;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+.form-control-tiny {
+  display: block;
+  width: 80%;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* End Imran Changes */
+
+/* Prasanna  Changes*/
+
+.buttons-div {
+  width: 100%;
+  display: table;
+  margin: 10px;
+}
+.blueColor {
+  background-color: #5289e4 !important;
+  float: right;
+}
+.default-btn {
+  background-color: #52b7e5;
+  color: white;
+  border: none;
+  margin-right: 15px;
+  border-radius: 4px;
+  padding: 5px 20px;
+  outline: none;
+}
+
+.custom-tbl {
+  width: 70%;
+  margin: auto;
+  width: 70%;
+  margin: auto;
+  border: 1px solid #ddd;
+}
+
+.custom-tbl th {
+  background-color: #039be6;
+  color: white;
+  font-weight: 600;
+}
+
+.coursoul-main-div {
+  border-radius: 5px;
+  border: 1px solid #e8e7e7;
+  margin-bottom: 6px;
+}
+
+.coursoul-header-div {
+  background-color: #979797;
+  color: white;
+  padding: 12px 25px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.blue-color {
+  background-color: #039be6 !important;
+  border-radius: 5px 5px 0px 0px;
+}
+.Contribution-Details {
+  background-color: #fff !important;
+  color: #000;
+  border-bottom: 1px solid #e8e7e7;
+}
+
+.coursoul-body-div {
+  padding: 12px;
+  font-size: 14px;
+}
+
+.coursoul-inner-row-div {
+  margin-bottom: 12px;
+}
+
+/* End Prasanna  Changes*/

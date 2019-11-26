@@ -1,23 +1,23 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import style from './style.scss';
+import ProfitSharing from '../ProfitSharing';
+import RetirementPlan from '../401K';
+import style from '../../containers/App/style.scss';
 
 class Home extends React.PureComponent {
   render() {
-    const { text } = this.props;
     return (
-      <div className={style.bodyContent}>
-        <p>{ text }</p>
+      <div className={style.mainBody}>
+        <div className="ProfitSharingDiv">
+          <div className="title">Profit Sharing</div>
+          <ProfitSharing />
+        </div>
+        <div className="RetirementPlanDiv">
+          <div className="title">401K</div>
+          <RetirementPlan />
+        </div>
       </div>
     );
   }
 }
-
-Home.propTypes = {
-  text: PropTypes.string,
-};
-Home.defaultProps = {
-  text: '',
-};
 
 export default Home;

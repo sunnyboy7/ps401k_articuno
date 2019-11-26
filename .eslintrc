@@ -6,13 +6,20 @@
     "jest": true
   },
   "rules": {
-    "camelcase": ["error", {"properties": "always"}],
-    "import/extensions": [{"sass": "never"}],
-    "jsx-a11y/anchor-is-valid": [ "error", { "components": [ "Link" ], "specialLink": [ "to" ] } ],
+    "double": { "allowTemplateLiterals": true },
+    "single": { "allowTemplateLiterals": true },
+    "linebreak-style": ["error", "windows"],
+    "react/prefer-stateless-function": [0, { "ignorePureComponents": false }],
+    "camelcase": ["error", { "properties": "always" }],
+    "import/extensions": [{ "sass": "never" }],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      { "components": ["Link"], "specialLink": ["to"] }
+    ],
     "react/forbid-prop-types": 0,
-    "no-undef":0,
-    "no-multiple-empty-lines": [2, {"max": 2, "maxBOF": 0, "maxEOF": 0}],
-    "max-lines": ["error", 150],
-    "max-statements-per-line": ["error", {"max": 1}]
+    "no-undef": 0,
+    "no-multiple-empty-lines": [2, { "max": 2, "maxBOF": 0, "maxEOF": 0 }],
+    "max-lines": ["error", 400],
+    "max-statements-per-line": ["error", { "max": 1 }]
   }
 }

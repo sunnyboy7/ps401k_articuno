@@ -1,0 +1,11 @@
+export const balanceLogo = '/src/assets/images/Inner-Logo.jpg';
+export const employeeLogo = '/src/assets/images/Employee.png';
+export const calculateLogo = '/src/assets/images/Inner-Logo.jpg';
+export const calculateEligibilityLogo = '/src/assets/images/CalculateEligibility.png';
+export const creatValuationsLogo = '/src/assets/images/CreatValuations.png';
+export const eparatedWithdrawalLogo = '/src/assets/images/EparatedWithdrawal.png';
+export const hceEmployeesLogo = '/src/assets/images/HCEEmployees.png';
+export const interimWithdrawalLogo = '/src/assets/images/InterimWithdrawal.png';
+export const statementsLogo = '/src/assets/images/Statements.png';
+export const valuationsLogo = '/src/assets/images/Valuations.png';
+export const withdrawalsLogo = '/src/assets/images/Withdrawals.png';
