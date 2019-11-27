@@ -14,7 +14,7 @@ class Employees extends React.PureComponent {
         <div className="card-tab">
           <div className="card">
             <div className="card-body">
-              <Link to="/Employees">
+              <Link to="/EmployeeMaintenance">
                 <img src={employeeLogo} className="card-img-top" alt="" />
                 <p className="card-text employees-list">Employees List</p>
               </Link>
