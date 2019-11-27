@@ -1,5 +1,103 @@
 @import '../../assets/styles/colors';
 
+/*Start Login*/
+.login-main-div {
+  background: url('../../assets/images/Login-BG.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+}
+.login-inner-div {
+  width: 380px;
+  background-color: #5cc88a;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px 0px rgb(90, 91, 86);
+}
+
+.login-front-img-div {
+  text-align: center;
+  padding-top: 32px;
+}
+
+.login-front-company-img {
+  width: 100px;
+  height: 100px;
+}
+
+.login-heading {
+  text-align: center;
+  color: #f0eeee;
+  font-size: 20px;
+  margin-top: 12px;
+}
+
+.login-body-heading {
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.login-body-desc {
+  text-align: center;
+  color: #eeeeee;
+  font-size: 15px;
+  padding-top: 3px;
+}
+
+.login-inputs-main-div {
+  padding: 40px;
+}
+
+.login-input-div {
+  margin-bottom: 15px;
+}
+
+.custom-input {
+  height: 36px;
+  width: 180px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+.email-extension-spn {
+  color: white;
+  margin-left: 4px;
+  font-size: 13px;
+}
+
+.error-txt {
+  color: #9b5b17;
+  font-weight: 600;
+  margin: 0;
+  display: none;
+}
+
+.custom-btn {
+  background-color: #ec1b2e;
+  color: white;
+  border: none;
+  padding: 9px 25px;
+  border-radius: 5px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*End Login*/
+
+/* Imran Changes */
 .headerContainer {
   text-align: left;
 }
@@ -19,9 +117,10 @@
 }
 
 .mainBody {
-  margin-left: 5%;
-  padding-top: 2%;
-  margin-right: 5%;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 3%;
+  background-color: #fff;
 }
 
 .divTitle {
@@ -76,3 +175,255 @@
   background-color: #979797;
   color: white;
 }
+
+#uncontrolled-tab-example-tab-completed:after {
+  position: relative;
+  content: '';
+  right: 40px;
+  top: 36px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #8e4fc4;
+  clear: both;
+}
+
+/* End Imran Changes */
+
+/* Vinod Changes */
+.header-tilte {
+  margin: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.navbar {
+  background-color: #5cc88a !important;
+}
+
+.navbar-collapse {
+  padding-left: 165px;
+}
+.navbar-brand {
+  top: -6px;
+  position: absolute;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  padding: 20px;
+}
+.cards {
+  display: table;
+  float: left;
+  padding-right: 3%;
+}
+
+.companyLogo {
+  max-width: 100%;
+}
+
+.card-tab {
+  border: 1px solid #bdb3b3;
+  height: 190px;
+}
+
+.card-tab-tiny {
+  width: 180px;
+}
+
+.card-img-top {
+  width: 60px;
+  height: 60px;
+}
+
+.card {
+  width: 150px;
+  float: left;
+  display: table;
+  cursor: pointer;
+  margin: 10px;
+  height: 160px;
+}
+
+.card:hover {
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+}
+
+.card-header-title {
+  font-weight: 500;
+}
+.card-body {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.employees-list {
+  color: #1e8bc3;
+}
+
+.balances-edit {
+  color: #f86924;
+}
+
+.float-none {
+  float: none;
+}
+
+.profitSharing,
+.retirementPlan {
+  width: 100%;
+  padding: 10px;
+  background-color: #ebeff2;
+  display: table;
+}
+.card-text {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.title {
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.greyColor {
+  background-color: #fff !important;
+}
+
+.beginningBal {
+  background-color: #afffff !important;
+}
+
+.empContrib {
+  background-color: #b9f89d !important;
+}
+
+.withdrawls {
+  background-color: #f2c9f2 !important;
+}
+
+.allocations {
+  background-color: #ffc973 !important;
+}
+
+.endingBal {
+  background-color: #b7eaff !important;
+}
+
+.MuiTableCell-stickyHeader {
+  font-weight: bold !important;
+  font-size: 13px !important;
+}
+
+/*.MuiTableCell-body {
+  border: 1px solid #ededed;
+}*/
+
+.pad-left-10 {
+  padding-left: 10px;
+}
+
+.required {
+  color: red;
+  padding-left: 5px;
+}
+
+.subHeader {
+  font-size: 18px;
+}
+
+.contribution {
+  float: right;
+}
+
+.form-control-tiny {
+  display: block;
+  width: 80%;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.buttons-div {
+  width: 100%;
+  display: table;
+  margin: 10px;
+}
+.blueColor {
+  background-color: #5289e4 !important;
+  float: right;
+}
+.default-btn {
+  background-color: #52b7e5;
+  color: white;
+  border: none;
+  margin-right: 15px;
+  border-radius: 4px;
+  padding: 5px 20px;
+  outline: none;
+}
+
+.blue-color {
+  background-color: #039be6 !important;
+  border-radius: 5px 5px 0px 0px;
+}
+/* End Vinod Changes */
+
+/* Prasanna  Changes*/
+
+.custom-tbl {
+  width: 70%;
+  margin: auto;
+  width: 70%;
+  margin: auto;
+  border: 1px solid #ddd;
+}
+
+.custom-tbl th {
+  background-color: #039be6;
+  color: white;
+  font-weight: 600;
+}
+
+.coursoul-main-div {
+  border-radius: 5px;
+  border: 1px solid #e8e7e7;
+  margin-bottom: 6px;
+}
+
+.coursoul-header-div {
+  background-color: #979797;
+  color: white;
+  padding: 12px 25px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.Contribution-Details {
+  background-color: #fff !important;
+  color: #000;
+  border-bottom: 1px solid #e8e7e7;
+}
+
+.coursoul-body-div {
+  padding: 12px;
+  font-size: 14px;
+}
+
+.coursoul-inner-row-div {
+  margin-bottom: 12px;
+}
+
+/* End Prasanna  Changes*/

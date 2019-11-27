@@ -1,16 +1,26 @@
+import './style.scss';
 import React from 'react';
-import style from './style.scss';
-// import EmployeeMaintenance from '../../components/Employees/EmployeeMaintenance';
-// import ValuationMaintenance from '../../components/Valuation/ValuationMaintenance';
-import WithdrawalsHistory from '../../components/Withdrawals/WithdrawalsHistory';
+import { Route, Switch } from 'react-router-dom';
+import Login from '../../components/Login/LoginPage';
+import Home from '../../components/Home';
+import EditValuation from '../../components/Valuation/EditValuation';
+import Employees from '../../components/Employees/EmployeeMaintenance';
+import ValuationMaintenance from '../../components/Valuation/ValuationMaintenance';
 
 class App extends React.PureComponent {
   render() {
     return (
-      <div className={style.mainBody}>
-        {/* <EmployeeMaintenance />
-        <ValuationMaintenance /> */}
-        <WithdrawalsHistory />
+      <div>
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route path="/Home" component={Home} />
+          <Route path="/Valuations" component={EditValuation} />
+          <Route path="/Employees" component={Employees} />
+          <Route
+            path="/ValuationMaintenance"
+            component={ValuationMaintenance}
+          />
+        </Switch>
       </div>
     );
   }

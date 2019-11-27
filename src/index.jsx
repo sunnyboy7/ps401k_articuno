@@ -1,7 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'babel-polyfill';
-import App from './containers/App';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import { render } from 'react-dom';
+import 'babel-polyfill';
+import { BrowserRouter as Router } from 'react-router-dom';
+import App from './containers/App';
 
-ReactDOM.render(<App />, document.getElementById('app'));
+render(
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById('app')
+);

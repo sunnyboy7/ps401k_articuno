@@ -8,17 +8,17 @@ module.exports = merge(baseConfig, {
   plugins: [
     // Minify CSS
     new webpack.DefinePlugin({
-      ...helpers.envConfig(envVariables),
+      ...helpers.envConfig(envVariables)
     }),
     new webpack.LoaderOptionsPlugin({
-      minimize: true,
-    }),
+      minimize: true
+    })
   ],
   devtool: 'eval-source-map',
   devServer: {
     inline: true,
     contentBase: './build',
     historyApiFallback: { index: '/' },
-    port: '8080',
-  },
+    port: '8026'
+  }
 });
