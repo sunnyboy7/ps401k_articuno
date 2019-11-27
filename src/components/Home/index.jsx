@@ -1,23 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import style from './style.scss';
+import React, { Fragment } from 'react';
+import ProfitSharing from '../ProfitSharing';
+import RetirementPlan from '../RetirementPlans';
+import Header from '../Header';
 
 class Home extends React.PureComponent {
   render() {
-    const { text } = this.props;
     return (
-      <div className={style.bodyContent}>
-        <p>{text}</p>
-      </div>
+      <Fragment>
+        <Header />
+        <div className="mainBody">
+          <div className="ProfitSharingDiv">
+            <div className="title">Profit Sharing</div>
+            <ProfitSharing />
+          </div>
+          <div className="RetirementPlanDiv">
+            <div className="title">401K</div>
+            <RetirementPlan />
+          </div>
+        </div>
+      </Fragment>
     );
   }
 }
-
-Home.propTypes = {
-  text: PropTypes.string
-};
-Home.defaultProps = {
-  text: ''
-};
 
 export default Home;

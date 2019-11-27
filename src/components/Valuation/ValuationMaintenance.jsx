@@ -14,6 +14,7 @@ import Calculator from '../../assets/images/Calculater.png';
 import Search from '../../assets/images/Search.png';
 import Print from '../../assets/images/Print.png';
 import Excel from '../../assets/images/Excel.png';
+import Header from '../Header';
 
 const columns = [
   {
@@ -172,139 +173,147 @@ const ValuationMaintenance = () => {
   };
   return (
     <Fragment>
-      <div className="divTitle">
-        <span>
-          <b className="subtitle1">Profit Sharing</b> -{' '}
-          <span className="subtitle2">Valuation Maintenance</span>
-        </span>
-        <div className="ExcelIcon">
-          <img
-            style={{
-              cursor: 'pointer',
-              paddingRight: '30px'
-            }}
-            src={Excel}
-            alt=""
-          />
+      <Header />
+      <div className="mainBody">
+        <div className="divTitle">
+          <span>
+            <b className="subtitle1">Profit Sharing</b> -{' '}
+            <span className="subtitle2">Valuation Maintenance</span>
+          </span>
+          <div className="ExcelIcon">
+            <img
+              style={{
+                cursor: 'pointer',
+                paddingRight: '30px'
+              }}
+              src={Excel}
+              alt=""
+            />
 
-          <img
-            style={{
-              cursor: 'pointer'
-            }}
-            src={Print}
-            alt=""
-          />
+            <img
+              style={{
+                cursor: 'pointer'
+              }}
+              src={Print}
+              alt=""
+            />
+          </div>
         </div>
-      </div>
 
-      <Paper className={classes.root}>
-        <div className={classes.tableWrapper}>
-          <Table stickyHeader aria-label="sticky table">
-            <TableHead>
-              <TableRow>
-                {columns.map(column => (
+        <Paper className={classes.root}>
+          <div className={classes.tableWrapper}>
+            <Table stickyHeader aria-label="sticky table">
+              <TableHead>
+                <TableRow>
+                  {columns.map(column => (
+                    <TableCell
+                      key={column.id}
+                      align={column.align}
+                      style={{
+                        minWidth: column.minWidth,
+                        backgroundColor: '#049be6',
+                        color: 'white'
+                      }}
+                    >
+                      {column.label}
+                    </TableCell>
+                  ))}
                   <TableCell
-                    key={column.id}
-                    align={column.align}
                     style={{
-                      minWidth: column.minWidth,
                       backgroundColor: '#049be6',
+                      minWidth: 56,
                       color: 'white'
                     }}
+                  />
+                  <TableCell
+                    style={{
+                      backgroundColor: '#049be6',
+                      color: 'white',
+                      minWidth: 120,
+                      align: 'left'
+                    }}
                   >
-                    {column.label}
+                    Calculate Balances
                   </TableCell>
-                ))}
-                <TableCell
-                  style={{
-                    backgroundColor: '#049be6',
-                    minWidth: 56,
-                    color: 'white'
-                  }}
-                />
-                <TableCell
-                  style={{
-                    backgroundColor: '#049be6',
-                    color: 'white',
-                    minWidth: 120,
-                    align: 'left'
-                  }}
-                >
-                  Calculate Balances
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map(row => (
-                  <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
-                    {columns.map(column => {
-                      const value = row[column.id];
-                      return (
-                        <TableCell key={column.id} align={column.align}>
-                          {value}
-                        </TableCell>
-                      );
-                    })}
-                    <TableCell>
-                      <span>
-                        <img
-                          style={{
-                            cursor: 'pointer',
-                            paddingRight: '15px'
-                          }}
-                          src={Search}
-                          alt=""
-                        />
-                        {row.fromdate === '2018-04-26' ? (
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {rows
+                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  .map(row => (
+                    <TableRow
+                      hover
+                      role="checkbox"
+                      tabIndex={-1}
+                      key={row.code}
+                    >
+                      {columns.map(column => {
+                        const value = row[column.id];
+                        return (
+                          <TableCell key={column.id} align={column.align}>
+                            {value}
+                          </TableCell>
+                        );
+                      })}
+                      <TableCell>
+                        <span>
                           <img
                             style={{
                               cursor: 'pointer',
-                              paddingBottom: '4px'
+                              paddingRight: '15px'
                             }}
-                            src={EditLogo}
+                            src={Search}
                             alt=""
                           />
-                        ) : (
-                          ''
-                        )}
-                      </span>
-                    </TableCell>
-                    <TableCell style={{ textAlign: 'center' }}>
-                      <span>
-                        {row.fromdate === '2018-04-26' ? (
-                          <img
-                            style={{ cursor: 'pointer', align: 'center' }}
-                            src={Calculator}
-                            alt=""
-                          />
-                        ) : (
-                          ''
-                        )}
-                      </span>
-                    </TableCell>
-                  </TableRow>
-                ))}
-            </TableBody>
-          </Table>
-        </div>
-        <TablePagination
-          rowsPerPageOptions={[10, 25, 100]}
-          component="div"
-          count={rows.length}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          backIconButtonProps={{
-            'aria-label': 'previous page'
-          }}
-          nextIconButtonProps={{
-            'aria-label': 'next page'
-          }}
-          onChangePage={handleChangePage}
-          onChangeRowsPerPage={handleChangeRowsPerPage}
-        />
-      </Paper>
+                          {row.fromdate === '2018-04-26' ? (
+                            <img
+                              style={{
+                                cursor: 'pointer',
+                                paddingBottom: '4px'
+                              }}
+                              src={EditLogo}
+                              alt=""
+                            />
+                          ) : (
+                            ''
+                          )}
+                        </span>
+                      </TableCell>
+                      <TableCell style={{ textAlign: 'center' }}>
+                        <span>
+                          {row.fromdate === '2018-04-26' ? (
+                            <img
+                              style={{ cursor: 'pointer', align: 'center' }}
+                              src={Calculator}
+                              alt=""
+                            />
+                          ) : (
+                            ''
+                          )}
+                        </span>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+              </TableBody>
+            </Table>
+          </div>
+          <TablePagination
+            rowsPerPageOptions={[10, 25, 100]}
+            component="div"
+            count={rows.length}
+            rowsPerPage={rowsPerPage}
+            page={page}
+            backIconButtonProps={{
+              'aria-label': 'previous page'
+            }}
+            nextIconButtonProps={{
+              'aria-label': 'next page'
+            }}
+            onChangePage={handleChangePage}
+            onChangeRowsPerPage={handleChangeRowsPerPage}
+          />
+        </Paper>
+      </div>
     </Fragment>
   );
 };

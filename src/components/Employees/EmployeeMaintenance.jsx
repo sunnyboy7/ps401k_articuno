@@ -14,6 +14,7 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import SearchIcon from '@material-ui/icons/Search';
 import Logo from '../../assets/images/Edit.png';
 import CashIcon from '../../assets/images/Cash-icon.png';
+import Header from '../Header';
 
 const columns = [
   {
@@ -152,105 +153,110 @@ const Employees = () => {
   };
   return (
     <Fragment>
-      <div className="divTitle">
-        <span>
-          <b className="subtitle1">Profit Sharing</b>-{' '}
-          <span className="subtitle2">Employee Maintenance</span>
-        </span>
-        {/* <span>
-            <input
-              className='searchBar'
-              type='text'
-              name='text'
-              placeholder='Search'
-            />
-          </span> */}
-        <TextField
-          className="searchBar"
-          id="standard-input"
-          placeholder="Search"
-          margin="normal"
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="start">
-                <SearchIcon />
-              </InputAdornment>
-            )
-          }}
-        />
-      </div>
+      <Header />
+      <div className="mainBody">
+        <div className="divTitle">
+          <span>
+            <b className="subtitle1">Profit Sharing</b>-{' '}
+            <span className="subtitle2">Employee Maintenance</span>
+          </span>
 
-      <Paper className={classes.root}>
-        <div className={classes.tableWrapper}>
-          <Table stickyHeader aria-label="sticky table">
-            <TableHead>
-              <TableRow>
-                {columns.map(column => (
+          <TextField
+            className="searchBar"
+            id="standard-input"
+            placeholder="Search"
+            margin="normal"
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="start">
+                  <SearchIcon />
+                </InputAdornment>
+              )
+            }}
+          />
+        </div>
+
+        <Paper className={classes.root}>
+          <div className={classes.tableWrapper}>
+            <Table stickyHeader aria-label="sticky table">
+              <TableHead>
+                <TableRow>
+                  {columns.map(column => (
+                    <TableCell
+                      key={column.id}
+                      align={column.align}
+                      style={{
+                        minWidth: column.minWidth,
+                        backgroundColor: '#049be6',
+                        color: 'white'
+                      }}
+                    >
+                      {column.label}
+                    </TableCell>
+                  ))}
                   <TableCell
-                    key={column.id}
-                    align={column.align}
                     style={{
-                      minWidth: column.minWidth,
+                      minWidth: 100,
                       backgroundColor: '#049be6',
                       color: 'white'
                     }}
-                  >
-                    {column.label}
-                  </TableCell>
-                ))}
-                <TableCell
-                  style={{
-                    minWidth: 100,
-                    backgroundColor: '#049be6',
-                    color: 'white'
-                  }}
-                />
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map(row => (
-                  <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
-                    {columns.map(column => {
-                      const value = row[column.id];
-                      return (
-                        <TableCell key={column.id} align={column.align}>
-                          {value}
-                        </TableCell>
-                      );
-                    })}
-                    <TableCell>
-                      <span>
-                        <img style={{ cursor: 'pointer' }} src={Logo} alt="" />
-                        <img
-                          style={{ marginLeft: '18px', cursor: 'pointer' }}
-                          src={CashIcon}
-                          alt=""
-                        />
-                      </span>
-                    </TableCell>
-                  </TableRow>
-                ))}
-            </TableBody>
-          </Table>
-        </div>
-        <TablePagination
-          rowsPerPageOptions={[10, 25, 100]}
-          component="div"
-          count={rows.length}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          backIconButtonProps={{
-            'aria-label': 'previous page'
-          }}
-          nextIconButtonProps={{
-            'aria-label': 'next page'
-          }}
-          onChangePage={handleChangePage}
-          onChangeRowsPerPage={handleChangeRowsPerPage}
-        />
-      </Paper>
+                  />
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {rows
+                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  .map(row => (
+                    <TableRow
+                      hover
+                      role="checkbox"
+                      tabIndex={-1}
+                      key={row.code}
+                    >
+                      {columns.map(column => {
+                        const value = row[column.id];
+                        return (
+                          <TableCell key={column.id} align={column.align}>
+                            {value}
+                          </TableCell>
+                        );
+                      })}
+                      <TableCell>
+                        <span>
+                          <img
+                            style={{ cursor: 'pointer' }}
+                            src={Logo}
+                            alt=""
+                          />
+                          <img
+                            style={{ marginLeft: '18px', cursor: 'pointer' }}
+                            src={CashIcon}
+                            alt=""
+                          />
+                        </span>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+              </TableBody>
+            </Table>
+          </div>
+          <TablePagination
+            rowsPerPageOptions={[10, 25, 100]}
+            component="div"
+            count={rows.length}
+            rowsPerPage={rowsPerPage}
+            page={page}
+            backIconButtonProps={{
+              'aria-label': 'previous page'
+            }}
+            nextIconButtonProps={{
+              'aria-label': 'next page'
+            }}
+            onChangePage={handleChangePage}
+            onChangeRowsPerPage={handleChangeRowsPerPage}
+          />
+        </Paper>
+      </div>
     </Fragment>
   );
 };
