@@ -138,7 +138,7 @@ const useStyles = makeStyles({
   }
 });
 
-const Employees = () => {
+const EmployeeMaintenance = () => {
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -261,4 +261,4 @@ const Employees = () => {
   );
 };
 
-export default Employees;
+export default EmployeeMaintenance;
