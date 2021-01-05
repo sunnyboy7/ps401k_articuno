@@ -59,7 +59,7 @@
     "@types/config": "^0.0.35",
     "acorn": "5.7.3",
     "autoprefixer": "^9.6.1",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "axios-mock-adapter": "1.9.0",
     "babel-plugin-require-context-hook": "^1.0.0",
     "babel-polyfill": "6.26.0",
